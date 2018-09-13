@@ -1,0 +1,101 @@
+   .search{
+     margin: 5px;
+     background-color: #F2F2F2;
+     border-radius: 9px;
+   }
+  
+  .search span{
+    margin-right: 13px;
+    padding-left: 6px;
+  } 
+  
+  .search input{
+    width: 87%;
+    background-color: #F2F2F2;
+    border: 0px;
+    font-size:12px;
+    padding-bottom: 5px;
+  }
+  .left{
+	  width: 28%;
+	  height: 400px;
+	  background: #FFFFFF;
+	  float: left;
+	  text-align: left;
+	  color: #fff;
+	  overflow-y: scroll;
+	}
+    
+    .left>span{
+        display: block;  /* 设置span换行 */
+	    color: black;
+	    font-size: 14px;
+	    background: #F8F8FA;
+	    margin-bottom: 2px;  /* 设置利用背景色显示span间的分割线 */
+	   /*  居中 父容器要设置 text-align: center; */
+	    line-height: 50px;
+	    margin: atuo 2px atuo auto;  
+	    padding-left:3px;
+	    /*字体样式*/
+	   font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+	   font-size:12px;
+	    
+    } 
+    
+	.right{
+	  /* margin-left: 210px; */
+	  height: 400px;
+	  background: #FFFFFF;
+	  text-align: center;
+	  margin:15px auto;
+	 /*  line-height: 600px; */
+	}
+	
+	ul{
+	 list-style: none;  /* 设计每个li的区域大小 */
+	}
+	li{
+		/* width: 237px;
+	    height: 265px; */
+	    float: left;
+	    margin-left:5px;
+	   /*  margin-top: 30px; */
+	    /* cursor: pointer; */
+	}
+	 .product {
+	    display: block;
+	    width: 70px;
+	    margin: 0 auto;
+	}
+	
+	 .product-img img {
+	    /* display: inline-block; */
+	    width: 70px;
+	    height: 70px;
+	} 
+	
+	.right .product .product-name {
+	    width: 70px;
+	    height: 15px;
+	    font-size: 12px;
+	    color: #333;
+	    margin: 10px auto 5px;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	    display: -webkit-box;
+	    display: -moz-box;
+	    display: -o-box;
+	    display: -ms-box;
+	    -webkit-box-orient: vertical;
+	    -webkit-line-clamp: 2;
+	    -moz-box-orient: vertical;
+	    -moz-line-clamp: 2;
+	    -o-box-orient: vertical;
+	    -o-line-clamp: 2;
+	    -ms-box-orient: vertical;
+	    -ms-line-clamp: 2;
+	    line-height: 15px;
+	}
+	body{
+	  overflow:hidden;
+	}
