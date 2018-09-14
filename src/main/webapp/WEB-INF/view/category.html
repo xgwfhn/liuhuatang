@@ -197,7 +197,10 @@
        var myTemplate = Handlebars.compile($("#ul-template").html());
      //将json对象用刚刚注册的Handlebars模版封装，得到最终的html，插入到基础table中。
        $('#myui').html(myTemplate(data));
-      
+     
+       $(".search>input").focus(function(){
+    	   self.location='/wechat/category/search';   
+ 	   }); 
     });
 		
 	</script>

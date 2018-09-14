@@ -9,7 +9,7 @@ public class CategoryController extends Controller {
 		render("category.html");
 	}
 
-	public String test() {
-		return "index.html"; 
+	public void search() {
+		render ("search.html"); 
 	}
 }

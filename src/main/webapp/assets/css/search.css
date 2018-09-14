@@ -1,0 +1,57 @@
+   .search{
+     margin: 8px;
+     background-color: #F2F2F2;
+     border-radius: 12px;
+     float: left;
+     width: 82%;
+   }
+   
+  .search span{
+    margin-right: 13px;
+    padding-left: 6px;
+  } 
+  
+  .searchText{
+  	font-size: 12px;
+    margin-top: 11px;
+    position: absolute;
+    margin-left: 3px;
+  }
+  
+  .search input{
+    width: 80%;
+    background-color: #F2F2F2;
+    border: 0px;
+    font-size:12px;
+    padding-bottom: 5px;
+    color:#b3a9a9;
+  }
+  
+  .line_02{
+    height: 1px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    margin-top: 15px;
+ }
+ 
+ 	ul{
+	 list-style: none;  /* 设计每个li的区域大小 */
+	 padding-left: 6px;
+     padding-right: 4px;
+	}
+	
+	li{
+		float: left;
+	    margin: 5px;
+	    background-color: #F2F2F2;
+	    width: 30%;
+	    text-align: center;
+	    font-size:12px;
+	     border-radius: 6px;
+	     height:26px;
+	     padding-top:4px;
+	}
+	.hotsearch{
+	  margin-top: -10px;
+	}
+ 
