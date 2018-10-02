@@ -59,8 +59,34 @@
 			</a>
 		</div>
 	</header> -->
-
-     <div class="search"><span class="am-icon-search"></span><input type="text" value="搜索商品"/></div>
+<div>
+	<div class="sn-nav sn-block">
+		<div class="sn-nav-back">
+			<span class="am-icon-chevron-left"></span><a class="sn-iconbtn" href="javascript:history.go(-1);">返回</a>
+		</div>
+		<div class="sn-nav-title of">苏宁超市</div>
+		<div class="sn-nav-right tr pr">
+			<img onclick="$('#sub-title').toggle();$('#screenIfmNav').toggle();"
+				src="data:image/png;charset=utf-8;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAYUExURUxpcTQ8RDQ8RDQ8RDQ8RDQ8RDQ8RDQ8RAEPSCIAAAAHdFJOUwD2cEy/EYW+tvqEAAAAb0lEQVRIDe2ROw7AMAhDwy/c/8ZVOgCVKuhayUyRsSF5WQsFAiAAAl8JiBKpPN29tv2uXTO9Jk5sxuRlz6Cp85nPrrlm0MjteM0pI4M2tGNO8Q2XiEjxDU+NSPX1QCOyqq//tsy8+bKLEwiAwK8IXL+VA7VJ24A2AAAAAElFTkSuQmCC"
+				style="width: 1rem">
+			<ul class="nav-more-list" id="sub-title">
+				<li><a class="nav-more-icon home-icon" href="//m.suning.com">首页</a>
+				</li>
+				<li><a class="nav-more-icon cart-icon"
+					href="//shopping.suning.com/project/cart/cart1.html">购物车</a></li>
+				<li><a class="nav-more-icon search-icon"
+					href="//m.suning.com/search.html">搜索</a></li>
+				<li><a class="nav-more-icon cate-icon"
+					href="//m.suning.com/list/list.html">全部分类</a></li>
+				<li><a class="nav-more-icon ebuy-icon"
+					href="//my.suning.com/wap/home.do">我的易购</a></li>
+			</ul>
+		</div>
+		<div id="screenIfmNv" class="screenIn"
+			onclick="$('#sub-title').toggle();$(this).hide();" style="opacty: 0">
+		</div>
+	</div>
+	<div class="search"><span class="am-icon-search"></span><input type="text" value="搜索商品"/></div>
      <div class="left" >
         <span>处方药(RX)</span>
 	    <span>非处方药(OTC)</span>
@@ -86,7 +112,7 @@
      	<ul id="myui">
      	</ul>
      </div>
-
+</div>
 	<!--在这里编写你的代码-->
 
 	<!--[if (gte IE 9)|!(IE)]><!-->
@@ -104,10 +130,10 @@
 		{{#each this}}
 		  <li>
      	  	<div class="product">
-                            	<a name="yys_sy_hyzq011" class="product-img" href="//product.suning.com/0000000000/858734798-2-2.html" target="_blank">
+                            	<a name="yys_sy_hyzq011" class="product-img" >
                                 	<img class="hyjpros11" alt="" src="{{imgsrc}}">
                             	</a>
-                            	<p class="product-name"><a name="yys_sy_hyzq011" href="//product.suning.com/0000000000/858734798-2-2.html" target="_blank">
+                            	<p class="product-name"><a name="yys_sy_hyzq011" >
                             		{{name}}</a>
                             	</p>
              </div>
@@ -200,6 +226,9 @@
      
        $(".search>input").focus(function(){
     	   self.location='/wechat/category/search';   
+ 	   }); 
+       $("#myui>li").click(function(){
+    	   self.location='/wechat/category/searchResult';   
  	   }); 
     });
 		
