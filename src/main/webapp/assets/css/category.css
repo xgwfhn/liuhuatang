@@ -1,5 +1,5 @@
 	html,body{
-		overflow-x:hidden;
+		overflow-x:hidden;  /* 禁止页面左右滑动 */
 	}
    .search{
      margin: 5px;
@@ -22,14 +22,15 @@
   }
   .left{
 	  width: 28%;
-	  height: 400px;
+	  height: 460px;
 	  background: #FFFFFF;
 	  float: left;
 	  text-align: left;
 	  color: #fff;
-	  overflow-y: scroll;
+	  overflow-y: auto;
 	   margin-top: 3px;
        margin-left: -30px;
+       z-index: 50;
 	}
     
     .left>span{
@@ -109,12 +110,13 @@
        position: relative;
     }
     
-    
+  
+   /*  浮动切换菜单 */
     .nav-more-list {
 	    display: none;
 	    position: absolute;
 	    top: 2.36rem;
-	    right: -.3rem;
+	    right: 5px;
 	    background: #484F55;
 	    z-index: 112;
 	    border: 1px solid transparent;
@@ -143,7 +145,25 @@
 	    font-size: 14px;
 	    margin-left: 5px;
 	}
+	
+	.home-icon:after {
+	     -webkit-mask-image: url(data:image/png;charset=utf-8;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyBAMAAADsEZWCAAAABGdBTUEAALGPC/xhBQAAABJQTFRFLo/9Lo/9Lo/9Lo/9AAAALo/9x5IphwAAAAV0Uk5TWOIgqQDx9kpIAAAA1ElEQVQ4y+2UQRKDIAxF4wzunU45QKd6ASt7GnWvYu5/lVKwIBJ7ArNA4OEnP4IwnAXs+volTogiw5MnAbUc0fI2PGbBEGXqAZXJSU9daBOCqnLPwr6ZkmL2MyinlESV0INNawo7l5ueJ/ts0WYfiN47tI5FIMoktfRDiItiNZwE+LKk4baFTOunB9aAyIi2pgBlxXxQWxJo5pohKBcoO/YU9BM0RGs2PxItgIolprZZjwxZnZ+LXOQ/eS8Zae6O9Mxd6BxBScf4nnV/546gPfzF0vgAsaxKR7EkvqwAAAAASUVORK5CYII=);
+	    -webkit-mask-position: 0 0; 
+    }
+    
+   .nav-more-icon:after {
+	     position: absolute;
+	    left: .3rem;
+	    top: 50%;
+	    margin-top: -.5rem;
+	    width: 1rem;
+	    height: 1rem;
+	    -webkit-mask-repeat: no-repeat;
+	    background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0,#fff),color-stop(100%,#fff));
+	    -webkit-mask-size: 1rem; 
+	}
 
+	/* -------------------------------------------*/
 	.sn-nav {
 	    /* border: 0;
 	    box-shadow: 0 1px 1px #dcdcdc; */
@@ -173,12 +193,13 @@
 	    margin: 0 auto;
 	    color: #333; */
 	    float:left;
-	    margin-left:100px;
+	    margin-left:38%;
 	    width: 80px;  /* 用于解决该div不换行的问题 */
+	    font-size:14px;
 	}
 	
 	.sn-nav-right{
-	  margin-left:320px;
+	  margin-left:89%;
 	}
 	
 	.sn-iconbtn{
@@ -198,7 +219,7 @@
 	    margin-top: -1px; 
 	    z-index: 98;
 	    padding: .4rem 0;  */
-	     height: 38px;
+	     height: 43px;
 	     border: 0;
 	    box-shadow: 0 1px 1px #dcdcdc;
     }
@@ -226,7 +247,7 @@
 	    line-height: .56rem;
 	    text-align: center; */
 	    margin-top: -21px;
-	    font-size: 12px;
+	    font-size: 10px;
 	    color: #908c8c;
 	}
 	.sn-nav-list .sn-nav-inp {
@@ -251,8 +272,8 @@
 	.sn-nav-list .sn-nav-inp .sn-search-iconbtn {
 	    display: block;
 	    margin: 5px 10px;
-	    width: 15px;
-	    height: 15px;
+	    width: 12px;
+	    height: 12px;
 	    background: url(data:image/gif;base64,R0lGODlhEAAQAPcAAP////////Ts3N3DkdKubc+pZc6nY9Coatm7jPPo2v///////////////////////////+zcv9SwcNe3febRr/fw5fbv5OTOrNKtd8yhZ+fTuv////////////////////Ts3NSwcOXPqff6/e/1++ry+uvz+vH2+/n7/d/Fo8mbY/Hm2P///////////////93Ckde2fff6/evz+ujx+eny+eny+ury+u71+/n7/c2kcdKuhP///////////////9KtbObRrvD2++jx+eny+eny+ury+uvz+uvz+vL3/N/Ep8OSW////////////////8+oY/fv5evz+uny+ury+ury+uvz+uvz+uzz+u71+/Tr4r+LUP///////////////82mYvbv5Ozz+ury+ury+uvz+uvz+uzz+uz0+u/1+/Tr4r6HTf///////////////82naOTMrPH3/Ovz+uvz+uvz+uz0+uz0+u30+vP4/Ny/pb6JVf///////////////9i5i9Gqdvn7/e/1++z0+uz0+u30+u30+vD2+/r8/ruFT8WVa/////////////////Ln2cqfZd7Eo/n7/vP4/O/1++/1+/T4/Pr8/sSUWNKrb75zQOPNu////////////////+bRuciaYMqgb97DpvTr4vTr4ty+pMGNU9a0eePMmd7EjbyDT/jx7f////////////////Hl2NGrg8GPWr6HTb2FTLuGUruBTNu/h+jVo+nXpdq7gKxlP/fx7f///////////////////////////////////+LLucGOWN/Fj+fToODHk8mbYZdhRvz59////////////////////////////////////+HJuLyEUde1fda1f8ORVrFyRfv39f///////////////////////////////////////+DHtqVcM7mASLNzS/jy7/////////////////////////////////////////////////n08cuplPz6+f///////yH5BAAAAAAALAAAAAAQABAAAAj+AAEEEDCAQAEDBxAkULCAQQMHDyBEkDCBQgULFzBk0LCBQwcPH0CEEDGCRAkTJ1CkULGCRQsXL2DEkDGDRg0bN3Dk0LGDRw8fP4AEETKESBEjR5AkUbKESRMnT6BEkTKFShUrV7Bk0bKFSxcvX8CEETOGTBkzZ9CkUbOGTRs3b+DEkTOHTh07d/Dk0bOHTx8/fwAFEjSIUCFDhxAlUrSIUSNHjyBFkjSJUiVLlzBl0rSJUydPn0CFEjWKVClTp1ClUrWKVStXr2DFkjWLVi1bt3Dl0rWLVy9fv4AFEzaMWDFjx5AlU7aMWTNnz6BFkzaNWjVr17Bl07aNWzdv38AlhRM3jlw5c+fQpVO3jl07d+/gxZM3j149e/fw5dO3j18/f/8EBAA7) center no-repeat;
 	    background-size: 100% 100%;
 	    float: left;
@@ -275,11 +296,69 @@
 	    overflow: hidden; */
 	    
 		display: block;
-	    font-size: 14px;
+	    font-size: 11px;
 	    margin-top: -4px;
 	    color:#bebbbb;
 	}
 	
+	 /*  左边菜单 */
+   .sn-list-nav {
+	   position: absolute;
+	    left: -10%;
+	   margin-top: 1%;
+	    width: 33%;
+	   height: calc(100vh - 140px);
+	    overflow-y: auto;
+	    z-index: 50;
+	    
+	}
+	
+	.sn-list-nav ul li.cur {
+	     border-right-color: transparent;
+	    background: #FFF;
+	    color: #ff3224;
+	}
+	
+	.sn-list-nav ul li {
+	    position: relative;
+	    float: left;
+	    width: 100%;
+	    height: 38px;
+	    line-height: 38px;
+	    text-align: center;
+	    background: #f4f4f4;
+	    border-right: 1px solid #e7e7e7;
+	    border-bottom: 1px solid #f4f4f4;
+	    box-sizing: border-box;
+	    font-size: 11px;
+	    font-style:normal;
+	}
+	
+	.sn-list-nav ul li:before {
+	     display: block;
+	    position: absolute;
+	    left: 0;
+	    bottom: -1px;
+	    content: '';
+	    width: 70px;
+	    height: 1px;
+	    background: #e7e7e7; 
+	}
+	
+	.sn-list-nav ul li.cur:after {
+    	 display: block; 
+	}
+	
+	.sn-list-nav ul li:after {
+	     display: none;
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	    content: '';
+	    height: 100%;
+	    width: 4px;
+	    background-color: #ff3224; 
+	}
 	/* 右边内容 */
 	.sn-list-con {
 	   /*  box-sizing: border-box;
@@ -294,12 +373,14 @@
 	    
 	   /*  position: absolute;
     	left: 17.5%; */
-    	height: calc(100vh - 5.76rem);
+    	height: calc(100vh - 150px);
     	overflow-y: auto;
         z-index: 50; 
-        
-        height: 460px;
+        position: relative;
+    	margin-left: 28%;
    	    width: 70%;
+   	    margin-top: 5%;
+   	   /*  height:500px; */
 	}
 	
 	.sn-list-con .con-box.cur {
@@ -323,8 +404,8 @@
 	
 	.sn-list-con .con-box .module-title.class-title {
 	     color: #222;
-	    font-size: 15px;
-	    line-height: 15px;
+	    font-size: 13px;
+	    line-height: 13px;
 	   /*  position: relative; */
 	    width: 100%;
 	    text-align: left;
@@ -375,7 +456,7 @@
 	    margin: 0 0 .3rem 0; */
 	    float: left;
 	    width: 27%;
-	    margin: 10px 6px;
+	    margin: 10px 5px;
 	}
 	
 	.sn-list-con .con-box .household-recommend ul li a {
@@ -383,22 +464,78 @@
 	}
 	
 	.sn-list-con .con-box .household-recommend ul li a img {
-	    width: 60.45px;
-	    height: 60.45px;
+	    width: 56.45px;
+	    height: 56.45px;
 	    margin: 3px;
 	    position: relative;
 	}
 	
 	.sn-list-con .con-box .household-recommend ul li a em {
-	     display: block;
+	    display: block;
 	    white-space: nowrap;
-	    font-size: 12px;
+	    font-size: 10px;
 	    color: #999;
-	    height: 1.08rem;
-	    line-height: 1.08rem;
+	    height: 13px;
+	    line-height: 13px;
 	    text-align: center;
-	    overflow: hidden; 
+	    overflow: hidden;
+	    font-style: normal;
+	    -webkit-text-size-adjust:none;
 	}
+	
+	
+	/* 菜单 */
+	ul.bottom {
+	     position: fixed;
+	    bottom: -40px;
+	   /*  left: -27px;*/
+	   left: -5%;
+       width: 110%;
+	    height: 66px;
+	    background: #fff;
+	    z-index: 300;
+	}
+	
+	ul.bottom li {
+	   /*  width: 3rem;
+	    height: 2rem; */
+	  /*   width: 35px;
+	    height: 35px; */
+	    float: left;
+	   /*  margin: auto 4px; */
+	    width:16%;
+	    margin-left: 2%;
+   	    margin-right: 2%;
+	    
+	}
+	
+	ul.bottom li img {
+	   /*  margin: .2rem 1.05rem .1rem;
+	    width: .9rem;
+	    height: .9rem; */
+	    width:20px;
+	    height:20px;
+	}
+	
+	ul.bottom li p {
+	   width: 57px;
+	    height: 8px;
+	    margin-top: 1px;
+	    text-align: center;
+	    font-size: 10px;
+	    position: relative;
+    	left: -16px;
+    	color: #333;
+	}
+	
+	.jrbx {
+	    width: 30px !important; /* !important表示优先使用此处的定义 */
+	    height: 30px !important;
+	    position: relative;
+	    top: 16%;
+	    /* left: -5%; */
+	    right: 5%;
+	}  
 	
 	/* .sn-nav-left, .sn-nav-right {
     top: 0;
