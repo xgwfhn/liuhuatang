@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.lht</groupId>
-	<artifactId>liuhuatang</artifactId>
+	<artifactId>hotel</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>liuhuatang Maven Webapp</name>
@@ -101,11 +101,17 @@
 		    <version>2.5</version>
 		</dependency>
 		
+		<!-- https://mvnrepository.com/artifact/org.json/json -->
+		<dependency>
+		    <groupId>org.json</groupId>
+		    <artifactId>json</artifactId>
+		    <version>20180813</version>
+		</dependency>		
 		<!-- WEB end -->
 	</dependencies>
 
 	<build>
-		<finalName>liuhuatang</finalName>
+		<finalName>hotel</finalName>
 		<!-- <outputDirectory>${webapp.dir}/WEB-INF/classes</outputDirectory> -->
 		<!-- 指定编译后文件的存放路径，因为jetty默认src/main/webapp为 web应用的根目录而 maven compile 目标后的默认classpath 
 			在target文件夹下，就造成jrebel.xml无法兼顾 jetty 默认的是webapp中的classes为 web 应用的根目录， 而maven 

@@ -21,6 +21,7 @@ import com.jfinal.wxaapp.WxaConfig;
 import com.jfinal.wxaapp.WxaConfigKit;
 import com.lht.common.controller.CategoryController;
 import com.lht.common.controller.HelloController;
+import com.lht.common.controller.HotelController;
 import com.lht.common.controller.IndexController;
 import com.lht.common.controller.WechatController;
 import com.lht.common.controller.WeixinApiController;
@@ -56,6 +57,7 @@ public class WeixinConfig extends JFinalConfig {
         me.add("/wechat/api", WeixinApiController.class, "/api");
         me.add("/wechat/category",CategoryController.class,"/WEB-INF/view");
         me.add("/wechat/index",IndexController.class,"/WEB-INF/view");
+        me.add("/wechat/hotel",HotelController.class,"/WEB-INF/view");
         
         /*me.add("/pay", WeixinPayController.class);
         me.add("/wxa/user", WxaUserApiController.class);
